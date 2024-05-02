@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>Add New Zone</mat-card-title>
+  <mat-card-content>
+    <form #zoneForm="ngForm" (ngSubmit)="onAddZone(zoneForm)">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Zone Name" name="name" ngModel required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Points (JSON)</mat-label>
+        <textarea matInput placeholder="Enter Points as JSON" name="points" ngModel required></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!zoneForm.valid">Add Zone</button>
+    </form>
+  </mat-card-content>
+</mat-card>

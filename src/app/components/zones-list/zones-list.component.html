@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title>Zones List</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let zone of zones">
+        name {{ zone['_1'] }} - Points: {{ zone["_2"] | json }}
+        <button mat-button color="warn" (click)="onDeleteZone(zone['_0'])">Delete</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
